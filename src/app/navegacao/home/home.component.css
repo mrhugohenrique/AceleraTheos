@@ -1,0 +1,63 @@
+.dev-card {
+  background: #1A202C;
+  width: 300px;
+  height: 175px;
+  margin-top: 130px;
+  margin-left: 30px;
+  position: absolute;
+}
+
+.formulario {
+  margin-top: 40px;
+  font-family: 'Roboto', sans-serif;
+  color: #FFFFFF;
+  padding: 0 10px;
+  line-height: 25px;
+}
+
+.dev-card__nome{
+    font-size: 16px;
+    font-weight: 500;
+    
+}
+.dev-card__cidade,
+.dev-card__formacao{
+    font-size: 14px;
+    font-weight: 400;
+
+    
+}
+
+img {
+  border-radius: 50%;
+  max-width: 88px;
+  max-height: 88px;
+  border: 3px solid #1A202C;
+  box-sizing: border-box;
+  background-blend-mode: normal;
+  width: auto;
+  height: auto;
+}
+
+.dev-card__image {
+  position: absolute;
+  right: 10px;
+  margin-top: -40px;
+
+}
+
+/*
+.dev-card__nome {
+
+  color: #313131;
+  text-transform: none;
+  font-size: 145%;
+  margin: 0.1em 0 2px;
+  text-transform: capitalize;
+}
+
+
+.dev-card__number,
+.dev-card__name {
+  padding: 0 10px;
+}*/
