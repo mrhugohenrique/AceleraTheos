@@ -2,20 +2,27 @@
   <div class="dev-card__image">
     <img src="/assets/foto.jpg" alt="dev image">
   </div>
-<div class="formulario"> 
-  <div class="dev-card__nome">
-    Hugo Henrique
+  <div class="formulario">
+    <div class="dev-card__nome">
+      Hugo Henrique
+    </div>
+    <div class="dev-card__cidade">
+      Maringá - PR
+    </div>
+    <div class="dev-card__formacao">
+      Angular
+    </div>
+    
+    <div class="editores">
+      <div >
+        <a class="CadastroGit" href="cadastro">Acessar GitHub</a>
+      </div>
+      <a class="alterar" [routerLink]="[ '/cadastro']">
+        <span class="fas fa-edit"></span>
+      </a>&nbsp;
+      <a class="deletar" [routerLink]="">
+        <span class="fas fa-trash-alt"></span>
+      </a>
+    </div>
   </div>
-  <div class="dev-card__cidade">
-    Maringá - PR
-  </div>
-  <div class="dev-card__formacao">
-    Angular
-  </div>
-  <i class="fa-thin fa-trash-can"></i>
-  <a class="btn btn-info">
-    <span class="fa fa-pencil-alt"></span>
-  </a>
-
-</div> 
 </div>

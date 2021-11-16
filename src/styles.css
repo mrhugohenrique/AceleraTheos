@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+:host {
+  flex-wrap: wrap !important;
+  display: flex !important;
+}
 
 #ccc {
   background: #1A202C;
@@ -12,7 +16,7 @@
   color: #fff;
 
   border-radius: 3px;
- 
+
 }
 
 #lupa {
@@ -26,7 +30,7 @@
 }
 
 a.navbar-brand {
-  font-family: Roboto;
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: bold;
   font-size: 32px;
@@ -39,21 +43,6 @@ a.navbar-brand {
 }
 
 
-/*
-.main-container {
-  padding-top: 25px;
-  padding-right: 15px;
-  padding-left: 15px;
-  padding-bottom: 100px;
-  margin-right: auto;
-  margin-left: auto;
-  overflow: hidden;
-}
-
-
-
-------------------------------------------------*/
-
 .card {
   white-space: normal;
   text-align: center;
@@ -63,65 +52,100 @@ a.navbar-brand {
   margin-top: 169px;
 }
 
-/* Sticky footer styles
-  --------------------------------------------------
-
-html {
-  font-size: 14px;
-}
-
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.border-top {
-  border-top: 1px solid #e5e5e5;
-}
-
-.border-bottom {
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
-}
-
-button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
-} */
-
-
-/* Sticky footer styles
-  -------------------------------------------------- */
-/*
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-body {
-
-  margin-bottom: 60px;
-}*/
-
 .footer {
-  position: absolute;
-  bottom: 0;
+
   width: 100%;
-  white-space: nowrap;
-  /* Set the fixed height of the footer here */
-  height: 60px;
-  line-height: 60px;
-  /* Vertically center the text there */
-
-
+  text-align: center;
+  left: 0;
+  right: 0;
+  height: 50px;
   background: #1A202C;
   box-sizing: border-box;
-
+  margin-top: 20px;
   border-radius: 3px;
+
 }
 
 
+/*---------------------------------------------------*/
+.dev-card {
+  margin-left: 500px;
+  background: #1A202C;
+  width: 300px;
+  height: 175px;
+  /* margin-left: 30px; */
+  position: absolute;
+  /* margin-top: 0 !important; */
+  top: 100px;
+}
+
+.formulario {
+  margin-top: 40px;
+  font-family: 'Roboto', sans-serif;
+  color: #FFFFFF;
+  padding: 0 10px;
+  line-height: 25px;
+}
+
+.dev-card__nome {
+  font-size: 16px;
+  font-weight: 500;
+
+}
+
+.dev-card__cidade,
+.dev-card__formacao {
+  font-size: 14px;
+  font-weight: 400;
+
+
+}
+
+img {
+  border-radius: 50%;
+  max-width: 88px;
+  max-height: 88px;
+  border: 3px solid #1A202C;
+  box-sizing: border-box;
+  background-blend-mode: normal;
+  width: auto;
+  height: auto;
+}
+
+.dev-card__image {
+  position: absolute;
+  right: 10px;
+  margin-top: -40px;
+
+}
+
+.editores {
+  display: flex;
+  padding-right: 20px;
+  position: absolute;
+  width: auto;
+  height: auto;
+  right: 10px;
+  margin-top: 20px;
+
+}
+
+
+
+.fa-edit {
+  color: #4299E1;
+  padding-right: 10px;
+}
+
+.fa-trash-alt {
+  color: #E53E3E;
+}
+
+a.CadastroGit {
+  color: #68D391;
+  text-decoration: none;
+  padding-right: 10px;
+
+}
+
+/*---------------------------------------------------*/

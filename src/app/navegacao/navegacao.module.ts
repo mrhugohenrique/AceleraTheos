@@ -4,21 +4,28 @@ import { RouterModule } from "@angular/router";
 import { FooterComponent } from "./footer/footer.component";
 import { MenuComponent } from "./menu/menu.component";
 import { HomeComponent } from "./home/home.component";
+import { CadastroComponent } from "../Cadastros/cadastro.component";
+import { GithubService } from "../Services/github.service";
+
 
 @NgModule({
     declarations:[
         HomeComponent,
         MenuComponent,
-        FooterComponent
+        FooterComponent,
+        CadastroComponent,
     ],
     imports:[
         CommonModule,
-        RouterModule
+        RouterModule,
+        
     ],
     exports:[
         MenuComponent,
         FooterComponent,
-        HomeComponent
+        HomeComponent,
+        CadastroComponent,
+        
     ]
 })
 
