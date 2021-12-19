@@ -1,82 +1,91 @@
-<div>
-<div class="container main-container">
-
+<div *ngIf="formulario">
+  
+  <div class="container main-container">
+    <form>
     <div class="form-group">
       <div>
         <div class="col-md-10">
-        <button ><img src="/assets/github.png" />Cadastrar com GitHub</button>
+          <button><img src="/assets/github.png" />Cadastrar com GitHub</button>
         </div>
       </div>
 
 
       <label class="col-md-10 control-label">Usuário Github</label>
-      <div class="col-md-10">
-        <input class="form-control" type="text" placeholder="Usuário Github" />
-      </div>
 
+      <div class="col-md-10">
+        <form>
+        <input class="form-control" type="text" placeholder="Usuário Github" [(ngModel)]="username" name="username" (blur)="onBlurEvent($event)"
+        />
+          
+    
       <hr>
 
 
-
-    </div>
-
-    <div class="form-group">
-      <label class="col-md-10 control-label" disabled>Avatar (URL)</label>
-      <div class="col-md-10">
-        <input class="form-control" type="text" placeholder="Avatar (URL)"  />
-      </div>
-    </div>
-
-    <div class="form-group">
-      <label class="col-md-10 control-label">Nome</label>
-      <div class="col-md-10">
-        <input class="form-control" type="text" placeholder="Nome" />
-      </div>
-    </div>
-
-    <div class="form-group">
-      <label class="col-md-10 control-label">E-mail</label>
-      <div class="col-md-10">
-        <input class="form-control" type="email" placeholder="E-mail (requerido)" />
-      </div>
-    </div>
-
-
-    <div class="form-group">
-      <label class="col-md-10 control-label">Cidade</label>
-      <div class="col-md-10">
-        <input class="form-control" type="text" placeholder="Cidade (requerido)" />
-      </div>
-    </div>
-
-
-    <hr>
-
-
-    <a>PROFISSIONAL</a>
-
-
-    <div class="form-group">
-      <label class="col-md-10 control-label">Formação</label>
-      <div class="col-md-10">
-        <input class="form-control" id="confirmPassword" type="password" placeholder="Formação" />
-      </div>
-    </div>
-
-    <div class="form-group">
-      <label class="col-md-10 control-label">Tecnologias</label>
-      <div class="col-md-10">
-        <textarea  class="form-control is-invalid" id="validationTextarea" placeholder="ex: HTML/CSS, Vue, Angular etc."></textarea>
-      </div>
-    </div>
-
-    <div class="form-group">
-      <div>
+    
+  
+    <div >
+      <form [formGroup]="formulario">
+      <div class="form-group">
+        <label class="col-md-10 control-label" >Avatar (URL)</label>
         <div class="col-md-10">
-          <span><button id="git" type="submit">Cadastrar</button></span>
+          <input class="form-control" type="text" placeholder="Avatar (URL)" formControlName="avatar"/>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-md-10 control-label">Nome</label>
+        <div class="col-md-10">
+          <input class="form-control" type="text" placeholder="Nome" formControlName="name"/>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-md-10 control-label">E-mail</label>
+        <div class="col-md-10">
+          <input class="form-control" type="email" placeholder="E-mail (requerido)" formControlName="email"/>
         </div>
       </div>
 
 
-    </div>
+      <div class="form-group">
+        <label class="col-md-10 control-label">Cidade</label>
+        <div class="col-md-10">
+          <input class="form-control" type="text" placeholder="Cidade (requerido)" formControlName="city"/>
+        </div>
+      </div>
+
+
+      <hr>
+
+
+      <a>PROFISSIONAL</a>
+
+
+      <div class="form-group">
+        <label class="col-md-10 control-label">Formação</label>
+        <div class="col-md-10">
+          <input class="form-control" type="text" placeholder="Formação"  formControlName="formacao"/>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-md-10 control-label">Tecnologias</label>
+        <div class="col-md-10">
+          <textarea class="form-control is-invalid" id="validationTextarea"
+            placeholder="ex: HTML/CSS, Vue, Angular etc." formControlName="bio" ></textarea>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div>
+          <div class="col-md-10">
+            <span><button id="git" type="submit">Cadastrar</button></span>
+          </div>
+        </div>
+
+
+      </div>
+  
+  </form>
+
   </div>

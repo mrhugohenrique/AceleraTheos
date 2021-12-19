@@ -6,19 +6,23 @@ import { AppComponent } from './app.component';
 import { NavegacaoModule } from './navegacao/navegacao.module';
 import { HttpClientModule } from '@angular/common/http';
 import { GithubService } from './Services/github.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     
+    
   ],
   imports: [
     BrowserModule,
     NavegacaoModule,
     AppRoutingModule,
-    HttpClientModule
-    
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
+
   ],
   providers: [GithubService],
   bootstrap: [AppComponent]

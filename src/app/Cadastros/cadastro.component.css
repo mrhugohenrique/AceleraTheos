@@ -1,5 +1,4 @@
 
-
 .main-container {
   width: 400px;
   left: 180px;
@@ -33,9 +32,9 @@ label{
 
 input,
 button {
-  /* White */
+
   background: #FFFFFF;
-  /* Cinzas/Gray-500 */
+
   border: 2px solid #A0AEC0;
   box-sizing: border-box;
   border-radius: 3px;

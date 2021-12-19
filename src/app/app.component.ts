@@ -8,18 +8,9 @@ import { GithubService } from './Services/github.service';
   
 })
 export class AppComponent implements OnInit {
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
   title = 'Cadastro';
 
-  profile: any[] = [];
-
- constructor(private githubService:GithubService){
-  this.githubService.getInfoPerfil().subscribe(perfil =>  {
-    console.log(perfil);
-  });
-  
- }
-
- ngOnInit(){
-   
- }
 }

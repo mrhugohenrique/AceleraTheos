@@ -1,21 +1,21 @@
-<div class="dev-card">
+<div class="dev-card" *ngFor="let gitHubUser of gitHubUser">
   <div class="dev-card__image">
-    <img src="/assets/foto.jpg" alt="dev image">
+    <img src="{{ gitHubUser.avatar_url }}" alt="dev image">
   </div>
   <div class="formulario">
     <div class="dev-card__nome">
-      Hugo Henrique
+      {{ gitHubUser.name }}
     </div>
     <div class="dev-card__cidade">
-      Maringá - PR
+      {{ gitHubUser.location }}
     </div>
     <div class="dev-card__formacao">
-      Angular
+      {{ gitHubUser.bio }}
     </div>
     
     <div class="editores">
       <div >
-        <a class="CadastroGit" href="cadastro">Acessar GitHub</a>
+        <a class="CadastroGit" href="{{gitHubUser.html_url}}">Acessar GitHub</a>
       </div>
       <a class="alterar" [routerLink]="[ '/cadastro']">
         <span class="fas fa-edit"></span>

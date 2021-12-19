@@ -1,10 +1,17 @@
 .dev-card {
   background: #1A202C;
   width: 300px;
-  height: 175px;
-  margin-top: 130px;
-  margin-left: 30px;
-  position: absolute;
+  height: 229px;
+  margin: 30px;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  left: 2000px
+}
+
+.dev-card div{
+  display: inline-block;
+  
 }
 
 .formulario {
@@ -13,6 +20,7 @@
   color: #FFFFFF;
   padding: 0 10px;
   line-height: 25px;
+  position: absolute;
 }
 
 .dev-card__nome{
@@ -46,18 +54,30 @@ img {
 
 }
 
-/*
-.dev-card__nome {
+.editores {
+  display: flex;
+  padding-right: 20px;
+  width: auto;
+  height: auto;
+  right: 10px;
+  margin-top: 20px;
+  
 
-  color: #313131;
-  text-transform: none;
-  font-size: 145%;
-  margin: 0.1em 0 2px;
-  text-transform: capitalize;
 }
 
+.fa-edit {
+  color: #4299E1;
+  padding-right: 10px;
+}
 
-.dev-card__number,
-.dev-card__name {
-  padding: 0 10px;
-}*/
+.fa-trash-alt {
+  color: #E53E3E;
+}
+
+a.CadastroGit {
+  color: #68D391;
+  text-decoration: none;
+  padding-right: 10px;
+  
+
+}

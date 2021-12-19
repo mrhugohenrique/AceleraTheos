@@ -6,6 +6,7 @@ import { MenuComponent } from "./menu/menu.component";
 import { HomeComponent } from "./home/home.component";
 import { CadastroComponent } from "../Cadastros/cadastro.component";
 import { GithubService } from "../Services/github.service";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -14,10 +15,14 @@ import { GithubService } from "../Services/github.service";
         MenuComponent,
         FooterComponent,
         CadastroComponent,
+        
     ],
     imports:[
         CommonModule,
         RouterModule,
+        FormsModule,
+        ReactiveFormsModule
+        
         
     ],
     exports:[
