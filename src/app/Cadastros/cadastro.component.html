@@ -19,12 +19,9 @@
           
     
       <hr>
-
-
-    
   
     <div >
-      <form [formGroup]="formulario">
+      <form (ngSubmit)="adicionarCadastro()" [formGroup]="formulario">
       <div class="form-group">
         <label class="col-md-10 control-label" >Avatar (URL)</label>
         <div class="col-md-10">
@@ -71,7 +68,7 @@
       <div class="form-group">
         <label class="col-md-10 control-label">Tecnologias</label>
         <div class="col-md-10">
-          <textarea class="form-control is-invalid" id="validationTextarea"
+          <textarea class="form-control" id="validationTextarea"
             placeholder="ex: HTML/CSS, Vue, Angular etc." formControlName="bio" ></textarea>
         </div>
       </div>

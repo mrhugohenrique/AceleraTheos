@@ -1,5 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 :host {
   flex-wrap: wrap !important;
   display: flex !important;
@@ -31,6 +32,10 @@
   border: 0 none;
 }
 
+.navbar{
+  
+}
+
 a.navbar-brand {
   font-family: 'Roboto';
   font-style: normal;
@@ -48,7 +53,6 @@ a.navbar-brand {
 
 
 .footer {
-
   width: 100%;
   text-align: center;
   left: 0;

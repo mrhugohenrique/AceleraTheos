@@ -1,6 +1,6 @@
 <div class="dev-card" *ngFor="let gitHubUser of gitHubUser">
   <div class="dev-card__image">
-    <img src="{{ gitHubUser.avatar_url }}" alt="dev image">
+    <img src="{{ gitHubUser.avatar_url }}" onerror="this.onerror=null; this.src='/assets/Default.jpg'" alt="dev image">
   </div>
   <div class="formulario">
     <div class="dev-card__nome">
@@ -17,7 +17,7 @@
       <div >
         <a class="CadastroGit" href="{{gitHubUser.html_url}}">Acessar GitHub</a>
       </div>
-      <a class="alterar" [routerLink]="[ '/cadastro']">
+      <a class="alterar" [routerLink]="[ '/cadastro',gitHubUser.id]">
         <span class="fas fa-edit"></span>
       </a>&nbsp;
       <a class="deletar" [routerLink]="">

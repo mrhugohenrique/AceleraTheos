@@ -1,18 +1,13 @@
-
 .main-container {
   width: 400px;
-  left: 180px;
   background-color: #FFFFFF;
   border: 1px solid #cbd5e0;
   box-sizing: border-box;
   box-shadow: 0px 8px 16px rgb(0 0 0 / 15%);
   border-radius: 3px;
-  margin-top: 12px !important;
-  margin-bottom: 22px !important;
   padding-top: 25px;
-  padding-bottom: 10px;
-
   margin-left: 50px;
+  margin-top: -850px;
 
 }
 
@@ -22,10 +17,11 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 24px;
- 
+
 
 }
-label{
+
+label {
   margin-top: 6px;
   margin-bottom: 1px;
 }
@@ -45,8 +41,8 @@ button {
   top: 108px;
 }
 
-button{
-  margin-bottom: 10px;  
+button {
+  margin-bottom: 10px;
 }
 
 #git {
