@@ -36,6 +36,9 @@ return {
       return this.http.get<GitHubUser>(this.url2 + 'cadastro', this.ObterHeaderJson())
     }
 
+    obterCadastro(): Observable <GitHubUser> {
+      return this.http.get<GitHubUser>(this.url2, this.ObterHeaderJson())
+    }
 
     adicionarCadastro(gitHubUser: GitHubUser): Observable <GitHubUser> {
       return this.http.post<GitHubUser>(this.url2 + 'cadastro', gitHubUser,  this.ObterHeaderJson())
