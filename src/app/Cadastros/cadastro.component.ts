@@ -1,9 +1,8 @@
-import { Component } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { GithubService } from '../Services/github.service';
 import { GitHubUser } from '../Services/GitHubUser';
 import {ToastrService} from 'ngx-toastr';
-
 @Component({
   selector: 'app-cadastro',
   templateUrl: './cadastro.component.html',
@@ -11,28 +10,30 @@ import {ToastrService} from 'ngx-toastr';
   providers:[GithubService]
 
 })
-export class CadastroComponent {
+export class CadastroComponent implements OnInit, AfterViewInit {
 
-
-
-  constructor(private formBuilder: FormBuilder,private toast: ToastrService, public githubService:GithubService){}
- 
   errors: any[] = [];
   formulario!: FormGroup;
   gitHubUser!: GitHubUser;
   formResult: string = '';
 
 
-
+  constructor(private formBuilder: FormBuilder,private toast: ToastrService, public githubService:GithubService){
+   
+  }
+  
+ 
   ngOnInit(): void {
     this.formulario = this.formBuilder.group({
-      userGit: null,
-      avatar_url:   null,
-      name:     null,
-      email:    null,
-      city:     null,
-      formacao: null,
-      bio:    null,
+      userGit: [''],
+      avatar_url:   [''],
+      name:     ['',Validators.required],
+      email:    ['',Validators.required],
+      city:     ['',Validators.required],
+      formacao: [''],
+      bio:    [''],
+      html_url: [''],
+      login:[''],
     });
   }
 
@@ -47,11 +48,17 @@ export class CadastroComponent {
           city:     data.location,
           bio:      data.bio,
           formacao: data.formacao,
+          html_url: data.html_url,
+          login:    data.login,
         })
       });
     }
   }
 
+
+  ngAfterViewInit(): void {
+    
+  }
 
   adicionarCadastro(): void {
 

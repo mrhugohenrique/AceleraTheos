@@ -1,5 +1,5 @@
 <div class="col-sm-8">
-<div class="dev-card"  *ngFor="let gitHubUser of gitHubUser, i as card">
+<div class="dev-card"  *ngFor="let gitHubUser of gitHubUser">
   <div class="dev-card__image">
     <img src="{{ gitHubUser.avatar_url }}" onerror="this.onerror=null; this.src='/assets/Default.jpg'" alt="dev image">
   </div>
@@ -8,7 +8,7 @@
       {{ gitHubUser.name }}
     </div>
     <div class="dev-card__cidade">&nbsp;
-      {{ gitHubUser.location }}
+      {{ gitHubUser.city }}
     </div>
     <div class="dev-card__formacao">&nbsp;
       {{ gitHubUser.bio }}
@@ -16,12 +16,12 @@
     
     <div class="editores">
       <div >
-        <a class="CadastroGit" href="{{gitHubUser.html_url}}">Acessar GitHub</a>
+        <a class="CadastroGit" href="{{gitHubUser.html_url}}" target="_blank">Acessar GitHub</a>
       </div>
-      <a class="alterar" [routerLink]="[ '/cadastro',gitHubUser.id]">
+      <a (click) ="alterarCadastro(gitHubUser.id)" class="alterar">
         <span class="fas fa-edit"></span>
       </a>&nbsp;
-      <a type="button" (click)="deletaCadastro(gitHubUser.id)" class="deletar" >
+      <a (click)="deletarCadastro(gitHubUser.id)" class="deletar" >
         <span class="fas fa-trash-alt"></span>
       </a>
     </div>

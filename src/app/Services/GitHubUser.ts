@@ -1,5 +1,4 @@
 export interface GitHubUser {
-
     name: string;
     login: string;
     id: string;
@@ -9,6 +8,5 @@ export interface GitHubUser {
     location: string;
     bio: string;
     formacao: string;
-    gitUser?: string;
-    gitProfile?: string;
+    html_url?: string;
   }

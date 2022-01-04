@@ -13,7 +13,7 @@
 
       <div class="col-md-10">
         <form>
-        <input class="form-control" type="text" placeholder="Usuário Github" [(ngModel)]="username" name="username" (blur)="onBlurEvent($event)"
+        <input class="form-control" type="text" placeholder="Usuário Github" [(ngModel)]="login" name="login" (blur)="onBlurEvent($event)"
         />
           
     
@@ -31,7 +31,11 @@
       <div class="form-group">
         <label class="col-md-10 control-label">Nome</label>
         <div class="col-md-10">
-          <input class="form-control" type="text" placeholder="Nome" required ng-minlength="3" ng-maxlength="150" formControlName="name"/>
+          <input class="form-control" type="text" id= "nome" placeholder="Nome (requerido)" 
+          formControlName="name"/>
+       <span class="text-danger" *ngIf="formulario.get('name').errors && (formulario.get('name').dirty || formulario.get('name').touched)">
+         <p>Preencha o campo nome</p>
+       </span>
         </div>
       </div>
 
@@ -39,6 +43,9 @@
         <label class="col-md-10 control-label">E-mail</label>
         <div class="col-md-10">
           <input class="form-control" type="email" placeholder="E-mail (requerido)" required ng-minlength="11" ng-maxlength="150" formControlName="email"/>
+          <span class="text-danger" *ngIf="formulario.get('email').errors && (formulario.get('email').dirty || formulario.get('email').touched)">
+            <p>Preencha o campo email</p>
+          </span>
         </div>
       </div>
 
@@ -47,6 +54,9 @@
         <label class="col-md-10 control-label">Cidade</label>
         <div class="col-md-10">
           <input class="form-control" type="text" placeholder="Cidade (requerido)" required ng-minlength="3" ng-maxlength="150" formControlName="city"/>
+          <span class="text-danger" *ngIf="formulario.get('city').errors && (formulario.get('city').dirty || formulario.get('city').touched)">
+            <p>Preencha o campo cidade</p>
+          </span>
         </div>
       </div>
 
@@ -60,7 +70,7 @@
       <div class="form-group">
         <label class="col-md-10 control-label">Formação</label>
         <div class="col-md-10">
-          <input class="form-control" type="text" placeholder="Formação" required ng-minlength="4" ng-maxlength="150"  formControlName="formacao"/>
+          <input class="form-control" type="text" placeholder="Formação" ng-maxlength="150"  formControlName="formacao"/>
         </div>
       </div>
 
@@ -68,7 +78,7 @@
         <label class="col-md-10 control-label">Tecnologias</label>
         <div class="col-md-10">
           <textarea class="form-control" id="validationTextarea"
-            placeholder="ex: HTML/CSS, Vue, Angular etc." formControlName="bio" required ng-minlength="4" ng-maxlength="150" ></textarea>
+            placeholder="ex: HTML/CSS, Vue, Angular etc." formControlName="bio" ng-maxlength="150" ></textarea>
         </div>
       </div>
 
