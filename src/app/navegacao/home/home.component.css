@@ -20,7 +20,8 @@
   color: #FFFFFF;
   padding: 0 10px;
   line-height: 25px;
-  position: absolute;
+  
+  display: flex;
 }
 
 .dev-card__nome{
@@ -68,10 +69,12 @@ img {
 .fa-edit {
   color: #4299E1;
   padding-right: 10px;
+  cursor: pointer;
 }
 
 .fa-trash-alt {
   color: #E53E3E;
+  cursor: pointer;
 }
 
 a.CadastroGit {

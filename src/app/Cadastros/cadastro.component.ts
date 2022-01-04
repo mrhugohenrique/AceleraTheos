@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { GithubService } from '../Services/github.service';
 import { GitHubUser } from '../Services/GitHubUser';
+import {ToastrService} from 'ngx-toastr';
 
 @Component({
   selector: 'app-cadastro',
@@ -14,7 +15,7 @@ export class CadastroComponent {
 
 
 
-  constructor(private formBuilder: FormBuilder, public githubService:GithubService){}
+  constructor(private formBuilder: FormBuilder,private toast: ToastrService, public githubService:GithubService){}
  
   errors: any[] = [];
   formulario!: FormGroup;
@@ -26,12 +27,12 @@ export class CadastroComponent {
   ngOnInit(): void {
     this.formulario = this.formBuilder.group({
       userGit: null,
-      avatar:   null,
+      avatar_url:   null,
       name:     null,
       email:    null,
       city:     null,
       formacao: null,
-      bio:    null
+      bio:    null,
     });
   }
 
@@ -40,12 +41,12 @@ export class CadastroComponent {
       this.githubService.getInfoPerfil(event.target.value).subscribe(data =>{
       
         this.formulario = this.formBuilder.group({
-          avatar:   data.avatar_url,
+          avatar_url:   data.avatar_url,
           name:     data.name,
           email:    data.email,
           city:     data.location,
           bio:      data.bio,
-          formacao: data.formacao
+          formacao: data.formacao,
         })
       });
     }
@@ -72,11 +73,24 @@ export class CadastroComponent {
     processarSucesso(response: any) {
       this.formulario.reset();
       this.errors = [];
+      let toast = this.toast.success("Cadastrado com sucesso");
+      if (toast){
+        toast.onHidden.subscribe(()=>{
+          this.load();
+        })
+      }
+
   
     }
 
     processarFalha(fail: any) {
       this.errors = fail.error.errors;
+      this.toast.error('Servidor indisponível');
+
     }
-    
+ 
+    load() {
+      location.reload()
+    }
+
 }

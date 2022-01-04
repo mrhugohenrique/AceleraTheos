@@ -7,6 +7,9 @@ import { NavegacaoModule } from './navegacao/navegacao.module';
 import { HttpClientModule } from '@angular/common/http';
 import { GithubService } from './Services/github.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -21,7 +24,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CommonModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(
+      {timeOut: 1000,
+      positionClass: 'toast-bottom-right'}
+    ),
 
   ],
   providers: [GithubService],
